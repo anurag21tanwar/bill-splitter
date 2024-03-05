@@ -45,7 +45,7 @@ def splitted_amount(ledger)
   while loop
     pr = person_need_to_receive(ledger)
     pr_name = pr&.first
-    if pr_name && ledger[pr_name] != 0
+    if pr_name && ledger[pr_name] > 0
       pp = person_need_to_pay(ledger)
       pp_name = pp.first
       amount = pp.last.abs
